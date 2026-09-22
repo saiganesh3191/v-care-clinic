@@ -35,10 +35,10 @@ import {
   Wind
 } from 'lucide-react';
 
-// Client-provided Google Share Links & Contact Info
-const VCARE_MAP_LINK = 'https://share.google/sDSW9fSv9sQRGjmMa';
-const HIGHCARE_MAP_LINK = 'https://share.google/OArnlwlzjU8Tk41tF';
-const PROCARE_MAP_LINK = 'https://share.google/MdXSTJbCf0GppnyzR';
+// Client-provided Google Live Maps Links & Contact Info
+const VCARE_MAP_LINK = 'https://www.google.com/maps/search/?api=1&query=V+Care+Clinic+Near+Alhamdulillah+Hotel+Aghapura+Nampally+Hyderabad';
+const HIGHCARE_MAP_LINK = 'https://www.google.com/maps/search/?api=1&query=Prime+HighCare+Hospital+Attapur+Pillar+102+Langar+House+Hyderabad';
+const PROCARE_MAP_LINK = 'https://www.google.com/maps/search/?api=1&query=PRO+CARE+CLINIC+Musheerabad+Beside+Marjaan+Hotel+Hyderabad';
 
 const PHONE_NUMBER = '9160621606';
 const PHONE_DISPLAY = '+91 91606 21606';
@@ -59,36 +59,34 @@ function LungsIcon({ size = 24, color = 'currentColor' }: { size?: number; color
   );
 }
 
-// Custom Hospital Logos
+// Custom Hospital Logos (Original Client Uploads)
 function HighCareLogo() {
   return (
-    <svg width="42" height="42" viewBox="0 0 40 40" fill="none">
-      <circle cx="20" cy="20" r="19" fill="#EFF6FF" stroke="#1D4ED8" strokeWidth="1.5" />
-      <path d="M20 10C16 6 10 9 10 14C10 19 20 27 20 27C20 27 30 19 30 14C30 9 24 6 20 10Z" fill="#EF4444" opacity="0.85" />
-      <circle cx="16" cy="14" r="2.5" fill="#1D4ED8" />
-      <circle cx="24" cy="14" r="2.5" fill="#1D4ED8" />
-      <path d="M16 20C17.5 22 22.5 22 24 20" stroke="#1D4ED8" strokeWidth="2" strokeLinecap="round" />
-    </svg>
+    <img
+      src="/images/logo-highcare-icon.png"
+      alt="Prime HighCare Hospital Logo"
+      style={{ height: '40px', width: 'auto', objectFit: 'contain', flexShrink: 0 }}
+    />
   );
 }
 
 function ProCareLogo() {
   return (
-    <svg width="42" height="42" viewBox="0 0 40 40" fill="none">
-      <circle cx="20" cy="20" r="19" fill="#FEF2F2" stroke="#B91C1C" strokeWidth="1.5" />
-      <path d="M12 18C12 14 15 11 20 11C25 11 28 14 28 18C28 23 20 29 20 29C20 29 12 23 12 18Z" fill="#10B981" opacity="0.8" />
-      <path d="M16 18H24M20 14V22" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" />
-    </svg>
+    <img
+      src="/images/logo-procare-icon.png"
+      alt="ProCare Clinic Logo"
+      style={{ height: '40px', width: 'auto', objectFit: 'contain', flexShrink: 0 }}
+    />
   );
 }
 
 function VCareLogo() {
   return (
-    <svg width="42" height="42" viewBox="0 0 40 40" fill="none">
-      <circle cx="20" cy="20" r="19" fill="#F0FDF4" stroke="#15803D" strokeWidth="1.5" />
-      <circle cx="20" cy="20" r="13" fill="#15803D" />
-      <path d="M15 20H25M20 15V25" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" />
-    </svg>
+    <img
+      src="/images/logo-vcare-icon.png"
+      alt="V Care Clinic Logo"
+      style={{ height: '40px', width: 'auto', objectFit: 'contain', flexShrink: 0 }}
+    />
   );
 }
 
@@ -576,7 +574,7 @@ export default function Home() {
 
         <div className="about-card">
           <div className="about-image">
-            <img src="/images/dr-vaseem.jpg" alt="Dr. Mohd Vaseem - Sr Consultant Pulmonologist" />
+            <img src="/images/dr-vaseem-white.jpg" alt="Dr. Mohd Vaseem - Sr Consultant Pulmonologist" />
           </div>
 
           <div className="about-content">
