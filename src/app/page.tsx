@@ -286,14 +286,14 @@ export default function Home() {
 
       {/* Main Header / Navigation */}
       <header>
-        <a href="#home" className="brand" aria-label="V Care Clinic Home">
+        <a href="#home" className="brand" aria-label="Dr. Mohd Vaseem Home">
           <div className="brand-icon">
             <Stethoscope size={24} />
           </div>
           <div className="brand-text">
-            <strong>V CARE CLINIC</strong>
-            <span>DR. MOHD VASEEM</span>
-            <small>Best Doctor in Hyderabad</small>
+            <strong>Dr. Mohd Vaseem</strong>
+            <span>MBBS MD FCCP (USA) CCEBDM FCD</span>
+            <small>Consultant Pulmonologist & Diabetologist</small>
           </div>
         </a>
 
@@ -329,8 +329,12 @@ export default function Home() {
       <section className="hero">
         <div className="hero-left">
           <span className="hero-eyebrow">COMPASSIONATE CARE. BETTER HEALTH.</span>
-          <h1>V CARE CLINIC<br />DR. MOHD VASEEM</h1>
-          <div className="hero-subtitle">Best Doctor in Hyderabad</div>
+          <h1>Dr. Mohd Vaseem</h1>
+          <div className="hero-qualifications">MBBS MD FCCP (USA) CCEBDM FCD</div>
+          <div className="hero-specialty-titles">
+            Consultant Pulmonologist (Chest Physician)<br />
+            Critical Care & Sleep Specialist &nbsp;•&nbsp; General Physician & Diabetologist
+          </div>
 
           <p className="hero-specialties">
             General Practitioner &nbsp;•&nbsp; Diabetologist &nbsp;•&nbsp; Infectious Disease Physician &nbsp;•&nbsp; Pulmonologist &nbsp;•&nbsp; Sleep Clinic
@@ -501,7 +505,10 @@ export default function Home() {
 
           <div className="about-content">
             <h2>Dr. Mohd Vaseem</h2>
-            <div className="about-doctor-title">Best Doctor in Hyderabad · Multi-Speciality Physician</div>
+            <div className="about-doctor-title">
+              MBBS MD FCCP (USA) CCEBDM FCD<br />
+              Consultant Pulmonologist (Chest Physician) · Critical Care & Sleep Specialist · General Physician & Diabetologist
+            </div>
             <p>
               Dr. Mohd Vaseem is a highly trusted medical professional offering multi-speciality care with a focus on patient well-being. He is associated with V Care Clinic in Aghapura, Nampally, Hyderabad.
             </p>
@@ -514,14 +521,14 @@ export default function Home() {
                 <GraduationCap size={20} />
                 <div>
                   <strong>Qualification</strong>
-                  <span>MBBS, MD, FCCP (USA)</span>
+                  <span>MBBS MD FCCP (USA)</span>
                 </div>
               </div>
               <div className="qual-item">
                 <ShieldCheck size={20} />
                 <div>
                   <strong>Fellowships</strong>
-                  <span>CCEBDM, FCD</span>
+                  <span>CCEBDM FCD</span>
                 </div>
               </div>
               <div className="qual-item">
@@ -833,8 +840,8 @@ export default function Home() {
                 <Stethoscope size={24} />
               </div>
               <div className="brand-text">
-                <strong style={{ color: '#ffffff' }}>V CARE CLINIC</strong>
-                <span style={{ color: '#cbd5e1' }}>DR. MOHD VASEEM</span>
+                <strong style={{ color: '#ffffff' }}>Dr. Mohd Vaseem</strong>
+                <span style={{ color: '#cbd5e1' }}>MBBS MD FCCP (USA) CCEBDM FCD</span>
               </div>
             </div>
             <p>

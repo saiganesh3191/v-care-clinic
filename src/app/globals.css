@@ -269,19 +269,28 @@ nav a:hover::after {
 }
 
 .hero h1 {
-  font-size: clamp(38px, 4vw, 54px);
+  font-size: clamp(38px, 4.5vw, 56px);
   font-weight: 800;
   color: var(--navy-deep);
-  line-height: 1.1;
+  line-height: 1.05;
   letter-spacing: -1px;
 }
 
-.hero-subtitle {
-  font-size: clamp(24px, 2.5vw, 32px);
+.hero-qualifications {
+  font-size: clamp(15px, 1.6vw, 20px);
   font-weight: 700;
   color: var(--blue-vibrant);
   margin-top: 6px;
-  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.hero-specialty-titles {
+  font-size: clamp(16px, 1.8vw, 22px);
+  font-weight: 700;
+  color: var(--navy-deep);
+  line-height: 1.4;
+  margin-top: 8px;
+  margin-bottom: 18px;
 }
 
 .hero-specialties {
