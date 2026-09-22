@@ -265,7 +265,26 @@ nav a:hover::after {
   letter-spacing: 1.5px;
   color: var(--blue-vibrant);
   text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.badge-15-years {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #041c44 0%, #1d61e7 100%);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13.5px;
+  font-weight: 800;
+  box-shadow: 0 4px 16px rgba(29, 97, 231, 0.3);
   margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-15-years svg {
+  color: var(--star-gold);
 }
 
 .hero h1 {
