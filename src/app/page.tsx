@@ -23,9 +23,16 @@ import {
   ExternalLink,
   Facebook,
   Instagram,
-  Youtube,
+  MessageSquare,
   Globe,
-  Stethoscope
+  Stethoscope,
+  Heart,
+  Brain,
+  Pill,
+  Thermometer,
+  Zap,
+  Flame,
+  Wind
 } from 'lucide-react';
 
 // Client-provided Google Share Links & Contact Info
@@ -35,6 +42,11 @@ const PROCARE_MAP_LINK = 'https://share.google/MdXSTJbCf0GppnyzR';
 
 const PHONE_NUMBER = '9160621606';
 const PHONE_DISPLAY = '+91 91606 21606';
+
+// Social Media Links
+const FACEBOOK_LINK = 'https://www.facebook.com/share/1FFK5qzdvt/';
+const WHATSAPP_CHANNEL_LINK = 'https://whatsapp.com/channel/0029Vb0E2xt8aKvTYB6Z0k11';
+const INSTAGRAM_LINK = 'https://www.instagram.com/drmohdvaseem?stkn=NGpybWM1aGk1NWJy';
 
 // Lungs Icon SVG Component
 function LungsIcon({ size = 24, color = 'currentColor' }: { size?: number; color?: string }) {
@@ -117,6 +129,31 @@ const services = [
     text: 'Diagnosis and treatment of complex bacterial, viral, fungal, and seasonal infections.',
     detail: 'Expert evaluation of fever of unknown origin, viral fevers, chest infections, post-viral complications, and specialized antimicrobial therapy.'
   }
+];
+
+// 21 Conditions Treated (Matching Reference Banner Grid)
+const treatedConditionsGrid = [
+  { title: 'General Physician', sub: 'Family Physician Care', icon: Stethoscope },
+  { title: 'BP & Hypertension', sub: 'High Blood Pressure', icon: Activity },
+  { title: 'Diabetes Mellitus', sub: 'Blood Sugar Control', icon: Syringe },
+  { title: 'Thyroid Care', sub: 'Metabolic Screening', icon: Flame },
+  { title: 'Fever & Infections', sub: 'Viral, Dengue, Malaria, Typhoid', icon: Thermometer },
+  { title: 'Sinus & Allergy', sub: 'Sneezing, Sinusitis, Cold', icon: Wind },
+  { title: 'GI Tract', sub: 'Acidity, Stomach Pain, Motions', icon: Pill },
+  { title: 'Heart Care', sub: 'Chest Pain, Palpitations', icon: Heart },
+  { title: 'Brain & Nerve', sub: 'Headache, Giddiness, Numbness', icon: Brain },
+  { title: 'Joint & Muscle Pain', sub: 'Arthritis & Body Aches', icon: Zap },
+  { title: 'Allergy & Asthma', sub: 'Airway Hypersensitivity', icon: LungsIcon },
+  { title: 'Smoking & COPD', sub: 'Emphysema & Bronchitis', icon: Wind },
+  { title: 'Pneumonia & TB', sub: 'Chest Infection Care', icon: ShieldCheck },
+  { title: 'ILD', sub: 'Interstitial Lung Disease', icon: LungsIcon },
+  { title: 'Lung Cancer', sub: 'Onco-pulmonology Care', icon: LungsIcon },
+  { title: 'Pleural Effusion', sub: 'Fluid Around Lungs', icon: Activity },
+  { title: 'Snoring & Insomnia', sub: 'Sleep Apnea Care', icon: MoonStar },
+  { title: 'Bronchoscopy', sub: 'Interventional Airway Care', icon: Activity },
+  { title: 'ICU Critical Care', sub: 'Emergency Support', icon: Siren },
+  { title: 'Ventilator Care', sub: 'Mechanical Ventilation', icon: Activity },
+  { title: 'Thoracoscopy', sub: 'Pleural Evaluation', icon: Activity }
 ];
 
 const googleReviews = [
@@ -617,33 +654,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Conditions We Treat Section */}
+      {/* Conditions We Treat Section (21 Conditions Cards Grid) */}
       <section className="section" id="conditions" style={{ background: '#f4f8ff' }}>
         <div className="section-header">
           <div className="badge-15-years" style={{ margin: '0 auto 12px' }}>
             <Award size={16} /> 15+ Years Expert Care
           </div>
           <span className="eyebrow">CONDITIONS WE TREAT</span>
-          <h2>Comprehensive Health Care</h2>
-          <p>Consult Dr. Mohd Vaseem for expert evaluation and personalized treatment plans.</p>
+          <h2>Comprehensive Medical Treatment</h2>
+          <p>Expert evaluation, diagnostic testing, and evidence-based care by Dr. Mohd Vaseem.</p>
         </div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', justifyContent: 'center', maxWidth: '900px', margin: '0 auto' }}>
-          {[
-            'Asthma & Bronchitis',
-            'COPD & Lung Infections',
-            'Sleep Disorders & Apnea',
-            'Diabetes & Blood Sugar Control',
-            'General Health Checkups',
-            'Fever & Viral Infections',
-            'Hypertension & Blood Pressure',
-            'Chest Infections & Cough',
-            'Infectious Diseases',
-            'Thyroid Management'
-          ].map((cond) => (
-            <div key={cond} style={{ background: '#ffffff', padding: '12px 20px', borderRadius: '30px', border: '1px solid #cbdffc', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', fontWeight: '600', color: '#041c44' }}>
-              <Check size={16} color="#1d61e7" />
-              {cond}
+        <div className="conditions-treat-grid">
+          {treatedConditionsGrid.map((c, i) => (
+            <div className="condition-card-box" key={i}>
+              <div className="condition-circle-icon">
+                <c.icon size={26} />
+              </div>
+              <h4>{c.title}</h4>
+              <div className="condition-bullets">{c.sub}</div>
             </div>
           ))}
         </div>
@@ -783,9 +812,9 @@ export default function Home() {
             )}
           </div>
 
-          {/* Column 3: Location Details */}
+          {/* Column 3: Location Details (Prime HighCare Hospital) */}
           <div className="visit-card location-card-wrapper" id="contact">
-            <h3>Hospital Location</h3>
+            <h3>Clinic Location</h3>
 
             <div className="location-info-list">
               <div className="location-info-item">
@@ -833,31 +862,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Exact CARE Hospitals Questions */}
       <section className="section" id="faq">
         <div className="section-header">
           <span className="eyebrow">FAQ</span>
           <h2>Frequently Asked Questions</h2>
-          <p>Helpful answers before your consultation with Dr. Mohd Vaseem.</p>
+          <p>Helpful answers regarding Dr. Mohammed Vaseem’s consultations and specialties.</p>
         </div>
 
         <div className="faq-grid">
           {[
             {
-              q: 'How many years of experience does Dr. Mohd Vaseem have?',
-              a: 'Dr. Mohd Vaseem has over 15+ years of clinical experience as a Senior Consultant Pulmonologist, Critical Care & Sleep Specialist, General Physician, and Diabetologist in Hyderabad.'
+              q: 'Where does Dr. Mohammed Vaseem practice?',
+              a: 'Dr. Mohammed Vaseem consults at Prime HighCare Hospital (Attapur, 7:00 PM to 10:30 PM), ProCare Clinic (Musheerabad, 4:30 PM to 6:30 PM), and V Care Clinic (Aghapura, Nampally, 3:00 PM to 4:30 PM).'
             },
             {
-              q: 'What are Dr. Mohd Vaseem’s consultation timings?',
-              a: 'Dr. Vaseem consults at V Care Clinic (3:00 PM - 4:30 PM), ProCare Clinic (4:30 PM - 6:30 PM), and Prime HighCare Hospital (7:00 PM - 10:30 PM).'
+              q: 'What is Dr. Mohammed Vaseem\'s educational qualification?',
+              a: 'Dr. Mohammed Vaseem holds MBBS, MD, FCCP (USA), CCEBDM, and FCD qualifications and fellowships with specialized training in Pulmonology, Sleep Medicine, Diabetes, and Critical Care.'
             },
             {
-              q: 'How do I book an appointment?',
-              a: 'Fill out the online appointment form on this page to send a direct WhatsApp message to reception, or call 9160621606 directly.'
+              q: 'What is the specialty of Dr. Mohammed Vaseem?',
+              a: 'Dr. Mohammed Vaseem is a Senior Consultant Clinical & Interventional Pulmonologist (Chest Physician), Critical Care & Sleep Specialist, General Physician, Diabetologist, and Infectious Disease Specialist.'
             },
             {
-              q: 'What respiratory and chest conditions does Dr. Vaseem treat?',
-              a: 'Dr. Vaseem treats asthma, COPD, bronchitis, chest infections, lung disease, snoring, obstructive sleep apnea, and post-viral respiratory complications.'
+              q: 'How many years of experience does Dr. Mohammed Vaseem have?',
+              a: 'Dr. Mohammed Vaseem has over 15+ years of rich clinical experience in pulmonology, chest disease, sleep disorders, diabetes, and critical care in Hyderabad.'
+            },
+            {
+              q: 'How can I book an appointment with Dr. Mohammed Vaseem?',
+              a: 'You can book an appointment by filling out the online request form on this page to send a direct WhatsApp message to reception, or by calling +91 91606 21606 directly.'
             }
           ].map((item, idx) => (
             <details className="faq-item" key={idx}>
@@ -896,14 +929,14 @@ export default function Home() {
               <a href={HIGHCARE_MAP_LINK} target="_blank" rel="noreferrer" className="social-icon" aria-label="Google Business">
                 <Globe size={18} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-icon" aria-label="Facebook">
+              <a href={FACEBOOK_LINK} target="_blank" rel="noreferrer" className="social-icon" aria-label="Facebook">
                 <Facebook size={18} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-icon" aria-label="Instagram">
-                <Instagram size={18} />
+              <a href={WHATSAPP_CHANNEL_LINK} target="_blank" rel="noreferrer" className="social-icon" aria-label="WhatsApp Channel" title="Follow Dr. Mohd Vaseem channel on WhatsApp">
+                <MessageSquare size={18} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="social-icon" aria-label="Youtube">
-                <Youtube size={18} />
+              <a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer" className="social-icon" aria-label="Instagram">
+                <Instagram size={18} />
               </a>
             </div>
           </div>
