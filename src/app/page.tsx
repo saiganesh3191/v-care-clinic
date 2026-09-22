@@ -362,23 +362,30 @@ export default function Home() {
       <header>
         <a href="#home" className="brand" aria-label="Dr. Mohd Vaseem Home">
           <div className="brand-icon">
-            <LungsIcon size={26} color="#ffffff" />
+            <LungsIcon size={24} color="#ffffff" />
           </div>
           <div className="brand-text">
             <strong>Dr. Mohd Vaseem</strong>
             <span>MBBS MD FCCP (USA) CCEBDM FCD</span>
-            <small>Sr. Consultant Pulmonologist & Diabetologist</small>
+            <small className="brand-subtitle">Sr. Consultant Pulmonologist & Diabetologist</small>
           </div>
         </a>
 
-        <button
-          className="menu-toggle"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-expanded={menuOpen}
-          aria-label="Toggle Navigation Menu"
-        >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="header-right-actions">
+          <a className="btn-primary btn-header-book" href="#appointment">
+            <CalendarDays size={16} />
+            <span>Book Appointment</span>
+          </a>
+
+          <button
+            className="menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-expanded={menuOpen}
+            aria-label="Toggle Navigation Menu"
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
 
         <nav className={menuOpen ? 'open' : ''}>
           <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
@@ -388,12 +395,10 @@ export default function Home() {
           <a href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</a>
           <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a href="#appointment" className="btn-primary mobile-menu-book" onClick={() => setMenuOpen(false)}>
+            <CalendarDays size={16} /> Book Appointment
+          </a>
         </nav>
-
-        <a className="btn-primary" href="#appointment">
-          <CalendarDays size={18} />
-          Book Appointment
-        </a>
       </header>
 
       {/* Top Clinic Branches 4-Card Banner Strip */}
