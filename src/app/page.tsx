@@ -367,6 +367,7 @@ export default function Home() {
           </div>
           <div className="brand-text">
             <strong>Dr. Mohd Vaseem</strong>
+            <span className="header-experience"><Award size={14} aria-hidden="true" />15+ Years Experience</span>
             <span>MBBS MD FCCP (USA) CCEBDM FCD</span>
             <small className="brand-subtitle">Sr. Consultant Pulmonologist & Diabetologist</small>
           </div>

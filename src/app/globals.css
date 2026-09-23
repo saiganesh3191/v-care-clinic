@@ -107,6 +107,22 @@ svg {
 }
 
 /* Navigation Header */
+.brand-text .header-experience {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin: 6px 0;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: #edf4ff;
+  color: #143e78;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: normal;
+  overflow: visible;
+}
+.header-experience svg { flex-shrink: 0; color: #996b0e; }
 header {
   display: flex;
   align-items: center;
@@ -1827,4 +1843,20 @@ footer {
   .doctor-gallery-grid figure>a { height: auto; }
   .doctor-gallery-grid img { width: 100%; height: auto; max-height: 540px; }
   .gallery-header-actions a { font-size: 13px; padding: 10px 12px; }
+}
+
+/* Allow navigation its own row before the doctor identity gets crowded. */
+@media (min-width: 801px) {
+  header:not(.gallery-header) { gap: 24px; flex-wrap: wrap; }
+  header:not(.gallery-header) > .brand { order: 1; flex-shrink: 0; }
+  header:not(.gallery-header) > nav { order: 2; gap: 18px; flex-wrap: wrap; }
+  header:not(.gallery-header) > .header-right-actions { order: 3; }
+}
+@media (min-width: 801px) and (max-width: 1400px) {
+  header:not(.gallery-header) > nav { order: 3; width: 100%; justify-content: center; }
+  header:not(.gallery-header) > .header-right-actions { order: 2; margin-left: auto; }
+}
+@media (max-width: 800px) {
+  .brand-text .header-experience { font-size: 12px; margin: 4px 0; padding: 2px 5px; }
+  header:not(.gallery-header) .brand-text { min-width: 0; }
 }
