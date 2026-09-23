@@ -37,7 +37,6 @@ export default function DoctorBackground() {
               <tbody>{positions.map(([period, hospital, role]) => <tr key={hospital}><td>{period}</td><th scope="row">{hospital}</th><td>{role}</td></tr>)}</tbody>
             </table>
           </div>
-          <p className="profile-source">Education and previous appointments: CARE Hospitals doctor profile.</p>
         </div>
       </div>
     </section>
