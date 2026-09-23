@@ -143,12 +143,6 @@ header {
   flex-shrink: 0;
 }
 
-.mobile-menu-book {
-  display: none;
-  margin-top: 10px;
-  width: 100%;
-  justify-content: center;
-}
 
 .brand {
   display: flex;
@@ -1456,9 +1450,6 @@ footer {
     white-space: nowrap;
   }
 
-  .mobile-menu-book {
-    display: flex;
-  }
 
   nav {
     display: none;

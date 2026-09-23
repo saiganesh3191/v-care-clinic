@@ -374,7 +374,7 @@ export default function Home() {
         </a>
 
         <div className="header-right-actions">
-          <a className="btn-primary btn-header-book" href="#appointment">
+          <a className="btn-primary btn-header-book" href="#appointment" aria-label="Book Appointment">
             <CalendarDays size={16} />
             <span>Book Appointment</span>
           </a>
@@ -398,9 +398,6 @@ export default function Home() {
           <a href="/gallery">Gallery</a>
           <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-          <a href="#appointment" className="btn-primary mobile-menu-book" onClick={() => setMenuOpen(false)}>
-            <CalendarDays size={16} /> Book Appointment
-          </a>
         </nav>
       </header>
 
