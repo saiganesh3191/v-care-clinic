@@ -366,8 +366,8 @@ export default function Home() {
             <LungsIcon size={24} color="#ffffff" />
           </div>
           <div className="brand-text">
-            <strong>Dr. Mohd Vaseem</strong>
             <span className="header-experience"><Award size={14} aria-hidden="true" />15+ Years Experience</span>
+            <strong>Dr. Mohd Vaseem</strong>
             <span>MBBS MD FCCP (USA) CCEBDM FCD</span>
             <small className="brand-subtitle">Sr. Consultant Pulmonologist & Diabetologist</small>
           </div>
@@ -591,9 +591,6 @@ export default function Home() {
               MBBS MD FCCP (USA) CCEBDM FCD<br />
               Sr Consultant Clinical & Interventional Pulmonologist (Chest Physician) · Critical Care & Sleep Specialist · General Physician & Diabetologist · Infectious Disease Specialist
             </div>
-            <p>
-              Dr. Vaseem is a pulmonology consultant at CARE Hospitals, Nampally, with a focus on chest medicine, critical care and sleep disorders.
-            </p>
 
             <div className="qualifications-row">
               <div className="qual-item">

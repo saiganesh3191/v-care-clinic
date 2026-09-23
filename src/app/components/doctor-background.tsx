@@ -27,7 +27,6 @@ export default function DoctorBackground() {
             <li><span>2012</span><strong>Critical Care fellowship</strong><p>Yashoda, Secunderabad</p></li>
             <li><span>2006–2012</span><strong>MBBS</strong><p>Deccan College of Medical Sciences</p></li>
           </ol>
-          <a className="btn-outline" href="https://www.carehospitals.com/doctor/hyderabad/nampally/mohammed-vaseem-pulmonologist" target="_blank" rel="noreferrer">View CARE Hospitals profile ↗</a>
         </div>
         <div className="experience-panel">
           <h3>Previous hospital appointments</h3>
