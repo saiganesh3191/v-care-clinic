@@ -1,5 +1,6 @@
 'use client';
 
+import DoctorBackground from './components/doctor-background';
 import { useEffect, useState, type FormEvent } from 'react';
 import {
   Activity,
@@ -37,8 +38,8 @@ import {
 
 // Client-provided Google Live Maps Links & Contact Info
 const VCARE_MAP_LINK = 'https://www.google.com/maps/search/?api=1&query=V+Care+Clinic+Near+Alhamdulillah+Hotel+Aghapura+Nampally+Hyderabad';
-const HIGHCARE_MAP_LINK = 'https://www.google.com/maps/search/?api=1&query=Prime+HighCare+Hospital+Attapur+Pillar+102+Langar+House+Hyderabad';
-const PROCARE_MAP_LINK = 'https://www.google.com/maps/search/?api=1&query=PRO+CARE+CLINIC+Musheerabad+Beside+Marjaan+Hotel+Hyderabad';
+const HIGHCARE_MAP_LINK = 'https://share.google/MdXSTJbCf0GppnyzR';
+const PROCARE_MAP_LINK = 'https://share.google/sDSW9fSv9sQRGjmMa';
 
 const PHONE_NUMBER = '9160621606';
 const PHONE_DISPLAY = '+91 91606 21606';
@@ -393,6 +394,7 @@ export default function Home() {
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
           <a href="#conditions" onClick={() => setMenuOpen(false)}>Conditions We Treat</a>
           <a href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</a>
+          <a href="/gallery">Gallery</a>
           <a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
           <a href="#appointment" className="btn-primary mobile-menu-book" onClick={() => setMenuOpen(false)}>
@@ -592,10 +594,7 @@ export default function Home() {
               Sr Consultant Clinical & Interventional Pulmonologist (Chest Physician) · Critical Care & Sleep Specialist · General Physician & Diabetologist · Infectious Disease Specialist
             </div>
             <p>
-              Dr. Mohd Vaseem is a renowned Senior Consultant Clinical & Interventional Pulmonologist, Critical Care & Sleep Specialist, General Physician, Diabetologist, and Infectious Disease Specialist with over 15 years of rich clinical experience in Hyderabad.
-            </p>
-            <p>
-              He specializes in advanced sleep medicine assessment, asthma & COPD care, interventional pulmonology, comprehensive diabetes management, and infectious disease care with a patient-first approach.
+              Dr. Vaseem is a pulmonology consultant at CARE Hospitals, Nampally, with a focus on chest medicine, critical care and sleep disorders.
             </p>
 
             <div className="qualifications-row">
@@ -617,15 +616,16 @@ export default function Home() {
                 <Globe size={20} />
                 <div>
                   <strong>Languages</strong>
-                  <span>English, Hindi, Urdu, Telugu</span>
+                  <span>English, Hindi, Telugu</span>
                 </div>
               </div>
             </div>
 
             <div>
               <a className="btn-primary" href="#appointment">
-                Book Consultation with Dr. Vaseem
+                Book a Consultation
               </a>
+              <a className="doctor-background-link" href="#doctor-background">Education &amp; hospital experience</a>
             </div>
           </div>
 
@@ -656,6 +656,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <DoctorBackground />
 
       {/* Conditions We Treat Section (21 Conditions Cards Grid) */}
       <section className="section" id="conditions" style={{ background: '#f4f8ff' }}>
@@ -753,7 +755,7 @@ export default function Home() {
               Fill out details to prepare your appointment request with Dr. Mohd Vaseem.
             </p>
 
-            <form onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit} onChange={() => { setRequestText(''); setErrorMessage(''); }}>
               <div className="form-grid">
                 <div className="form-group">
                   <label htmlFor="name">Full Name *</label>
@@ -789,7 +791,7 @@ export default function Home() {
                 Timings: Prime HighCare (7:00-10:30 PM), ProCare (4:30-6:30 PM), V Care (3:00-4:30 PM). Sunday Closed.
               </p>
 
-              {errorMessage && <div className="form-error">{errorMessage}</div>}
+              {errorMessage && <div className="form-error" role="alert">{errorMessage}</div>}
 
               <button className="btn-primary" type="submit" style={{ width: '100%' }}>
                 <CalendarDays size={18} />
@@ -798,7 +800,7 @@ export default function Home() {
             </form>
 
             {requestText && (
-              <div className="request-result-box">
+              <div className="request-result-box" role="status">
                 <strong>Your Appointment Request is Ready!</strong>
                 <p>Click below to send your details directly to Dr. Vaseem's reception on WhatsApp:</p>
                 <div className="request-preview">{requestText}</div>
@@ -952,6 +954,7 @@ export default function Home() {
               <li><a href="#services">Services</a></li>
               <li><a href="#conditions">Conditions We Treat</a></li>
               <li><a href="#reviews">Reviews</a></li>
+              <li><a href="/gallery">Gallery</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
